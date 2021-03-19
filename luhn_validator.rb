@@ -11,8 +11,9 @@ module LuhnValidator
       if(index.odd?)
         temp = digit * 2
         sum += (temp>=10) ? temp - 9 : temp
+      else 
+        sum += digit
       end
-      sum += digit
     end
 
     return sum.modulo(10).zero?
